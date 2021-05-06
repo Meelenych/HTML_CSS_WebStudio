@@ -228,9 +228,11 @@ img {
   min-height: 50px;
   min-width: 200px;
   margin-top: 30px;
+  fill: var(--alt-text-cl);
 }
 
-.service:hover {
+.service:hover,
+.subscribe-button:hover {
   animation: scale 1.5s ease-in-out;
 }
 
@@ -542,6 +544,49 @@ img {
 
 .studio-social {
   fill: var(--alt-text-cl);
+}
+
+/*Подписка*/
+
+.subscribe {
+  display: block;
+  margin-left: 93px;
+}
+
+.subscribe > input,
+.subscribe > button {
+  display: inline-flex;
+  align-items: center;
+}
+
+.input-email {
+  width: 358px;
+  height: 50px;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: var(--dark-bg);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  padding-left: 16px;
+  margin-right: 12px;
+}
+
+.subscribe-button {
+  color: var(--alt-text-cl);
+  background-color: var(--accent-cl);
+  min-height: 50px;
+  min-width: 200px;
+  fill: var(--alt-text-cl);
+}
+.subscribe-txt {
+  margin-left: 7px;
+}
+.subscribe-button > svg {
+  margin-left: 10px;
 }
 
 /*Модальное окно*/
