@@ -43,15 +43,17 @@
           <li class="menu-item">
             <a class="link" href="mailto:info@devstudio.com">
               <svg class="e-mail" width="16px" height="12px">
-                <use href="./images/icons.svg#icon-envelope-hover"></use></svg
-              >info@devstudio.com</a
+                <use href="./images/icons.svg#icon-envelope-hover"></use>
+              </svg>
+              info@devstudio.com</a
             >
           </li>
           <li class="menu-item">
-            <a class="link" href="tel:+380961111111"
-              ><svg class="phone" width="10px" height="16px">
-                <use href="./images/icons.svg#icon-phone"></use></svg
-              >+38 096 111 11 11</a
+            <a class="link" href="tel:+380961111111">
+              <svg class="phone" width="10px" height="16px">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+              +38 096 111 11 11</a
             >
           </li>
         </ul>
@@ -239,7 +241,7 @@
         </div>
       </section>
     </main>
-    <!--Подвал-->
+     <!--Подвал-->
     <footer class="footer">
       <div class="container">
         <div class="foter-content">
@@ -325,13 +327,13 @@
           <div class="subscribe">
             <p class="connect">Подпишитесь на рассылку</p>
             <input
-              type="text"
+              type="email"
               name=""
               id=""
               class="input-email"
               placeholder="E-mail"
             />
-            <button type="button" class="btn subscribe-button">
+            <button type="submit" class="btn subscribe-button">
               <span class="subscribe-txt"> Подписаться</span>
               <svg width="24px" height="24px">
                 <use href="./images/icons.svg#send"></use>
@@ -348,10 +350,55 @@
               <use href="./images/icons.svg#close"></use>
             </svg>
           </button>
-          <p class="modal-title">Закажите услугу прямо сейчас!</p>
-          <p>Оставьте свои данные, мы вам перезвоним!</p>
+          <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+
+          <form name="signup_form" autocomplete="on" novalidate>
+            <label for="name">Имя</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="input-box"
+              autofocus
+              required
+              pattern="^[a-zA-Z+а-яА-Я\s]+$"
+            />
+            <label for="tel">Телефон</label>
+            <input type="tel" name="tel" id="tel" class="input-box" required pattern="[0-9]{10,12}" />
+
+            <label for="email">Почта</label>
+            <input type="email" name="email" id="email" class="input-box" />
+
+            <label for="comment">Комментарий</label>
+
+            <textarea
+              name="comment"
+              id="comment"
+              placeholder="Введите текст"
+            ></textarea>
+
+            <input
+              type="checkbox"
+              name="checkbox"
+              id="checkbox"
+              class="checkbox is-hidden"
+            />
+            <label for="checkbox"></label>
+              <span class="agreement">
+                Соглашаюсь с рассылкой и принимаю 
+                <a href="#" class="link-agreement">Условия договора
+                </a>
+              </span>
+            </label>
+
+            <button type="submit" class="btn subscribe-button send-btn">
+              Отправить
+            </button>
+          </form>
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
