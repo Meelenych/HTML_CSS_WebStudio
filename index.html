@@ -617,29 +617,52 @@
           <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
 
           <form name="signup_form" autocomplete="on" novalidate>
-            <label for="name">Имя</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              class="input-box"
-              autofocus
-              required
-              pattern="^[a-zA-Z+а-яА-Я\s]+$"
-            />
-            <label for="tel">Телефон</label>
-            <input type="tel" name="tel" id="tel" class="input-box" required pattern="[0-9]{10,12}" />
+           <div class=".inputs">
+              <label for="name">Имя
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="input-box"
+                autofocus
+                required
+                pattern="^[a-zA-Z+а-яА-Я\s]+$"
+              />
+                <svg width="18px" height="18px" class="input-icon">
+                  <use href="./images/icons.svg#person"></use>
+                </svg>
+            </div>
 
-            <label for="email">Почта</label>
-            <input type="email" name="email" id="email" class="input-box" />
+           <div class=".inputs">
+              <label for="tel">Телефон</label>
+              <input type="tel" name="tel" id="tel" class="input-box" required pattern="[0-9]{10,12}" />
+
+                <svg width="18px" height="18px" class="input-icon">
+                  <use href="./images/icons.svg#telephone"></use>
+                </svg>
+            </div>
+
+            <div class=".inputs">
+              <label for="email">Почта</label>
+              <input type="email" name="email" id="email" class="input-box" />
+
+                <svg width="18px" height="18px" class="input-icon">
+                  <use href="./images/icons.svg#email-box"></use>
+                </svg>
+            </div>
 
             <label for="comment">Комментарий</label>
-
             <textarea
               name="comment"
               id="comment"
               placeholder="Введите текст"
             ></textarea>
+
+
+              <svg width="11px" height="8px">
+                <use href="./images/icons.svg#check"></use>
+              </svg>
 
             <input
               type="checkbox"
@@ -654,6 +677,8 @@
                 </a>
               </span>
             </label>
+
+
 
             <button type="submit" class="btn subscribe-button send-btn">
               Отправить
