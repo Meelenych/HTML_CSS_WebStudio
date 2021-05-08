@@ -652,7 +652,8 @@ img {
   height: 14px;
 }
 
-.close-svg:hover {
+.modal-close-btn:hover .close-svg,
+.modal-close-btn:focus .close-svg {
   fill: var(--accent-cl);
 
   transition-property: fill;
@@ -660,8 +661,9 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0;
 }
+
 .inputs {
-  height: 10px];
+  height: 0px;
 }
 
 .input-box {
@@ -686,6 +688,7 @@ img {
   top: -40px;
 }
 
+input:focus .input-icon,
 input:focus,
 textarea:focus,
 .inputs {
@@ -693,7 +696,7 @@ textarea:focus,
   border-radius: 4px;
   fill: var(--accent-cl);
 
-  transition-property: border;
+  transition-property: border, fill;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0;
