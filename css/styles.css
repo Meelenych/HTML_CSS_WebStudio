@@ -554,9 +554,11 @@ img {
 }
 
 .subscribe > input,
-.subscribe > button {
+.subscribe > button,
+.subscribe > form {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
 
 .input-email {
@@ -587,6 +589,7 @@ img {
 }
 .subscribe-button > svg {
   margin-left: 10px;
+  vertical-align: middle;
 }
 
 /*Модальное окно*/
@@ -598,7 +601,6 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-
   transition-duration: 1500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -617,7 +619,6 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
-
   max-height: 100%;
   max-width: 100%;
 }
@@ -648,8 +649,6 @@ img {
 
 .close-svg {
   fill: #000000;
-  width: 14px;
-  height: 14px;
 }
 
 .modal-close-btn:hover .close-svg,
@@ -663,40 +662,41 @@ img {
 }
 
 .inputs {
-  height: 0px;
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .input-box {
   width: 448px;
   height: 40px;
-  margin-bottom: 10px;
-
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-}
-
-.input-box {
-  padding-left: 48px;
+  padding-left: 42px;
 }
 
 .input-icon {
   fill: currentColor;
-  position: relative;
+  position: absolute;
   fill: var(--title-cl);
   left: 15px;
-  top: -40px;
+  top: 11px;
 }
 
-input:focus .input-icon,
-input:focus,
-textarea:focus,
-.inputs {
-  border: 1px solid #2196f3;
-  border-radius: 4px;
+input:focus + .input-icon {
   fill: var(--accent-cl);
 
-  transition-property: border, fill;
+  transition-property: fill;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid var(--accent-cl);
+
+  transition-property: border;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0;
@@ -708,33 +708,61 @@ textarea {
   height: 120px;
   padding: 12px 16px 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
   border-radius: 4px;
   font-size: 12px;
   line-height: 1.17px;
   letter-spacing: 0.01em;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+.agreement {
+  /*text-decoration: none;*/
 }
 
-.checkbox {
-  margin-bottom: 30px;
-  border: 1px solid black;
-}
-
-.link-agreement {
+/*.link-agreement {
   color: var(--accent-cl);
-  text-decoration: underline;
-}
+}*/
 
 label {
   font-size: 12px;
-  line-height: 1.17;
+  line-height: 1.16;
   letter-spacing: 0.01em;
 }
 
-.agreement {
-  text-decoration: none;
+/*Чекбокс*/
+.checkbox:checked + .chk-lbl {
+  color: red;
 }
+
+.chk-div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.chk {
+  position: absolute;
+  top: 6px;
+  left: 18px;
+
+  background-color: var(--accent-cl);
+  fill: var(--alt-text-cl);
+}
+
+.chk-lbl {
+}
+
+.chk-lbl::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 1px solid var(--accent-cl);
+  border-radius: 2px;
+  display: inline-block;
+}
+
+/*============Чекбокс===============*/
 
 .send-btn {
   margin-right: 124px;
@@ -750,6 +778,7 @@ input:invalid {
 }
 
 .is-hidden {
+  display: none;
   visibility: hidden;
   opacity: 0;
   pointer-events: none;

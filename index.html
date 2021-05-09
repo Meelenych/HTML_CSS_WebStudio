@@ -44,17 +44,16 @@
           <li class="menu-item">
             <a class="link" href="mailto:info@devstudio.com">
               <svg class="e-mail" width="16px" height="12px">
-                <use href="./images/icons.svg#icon-envelope-hover">
-                </use>
-              </svg>info@devstudio.com
+                <use href="./images/icons.svg#icon-envelope-hover"></use></svg
+              >info@devstudio.com
             </a>
           </li>
           <li class="menu-item">
             <a class="link" href="tel:+380961111111"
               ><svg class="phone" width="10px" height="16px">
-                <use href="./images/icons.svg#icon-phone"></use>
-                </svg>+38 096 111 11 11
-                </a>
+                <use href="./images/icons.svg#icon-phone"></use></svg
+              >+38 096 111 11 11
+            </a>
           </li>
         </ul>
       </div>
@@ -464,42 +463,43 @@
               <a href="" class="client-svg-tile link"
                 ><svg class="client-svg" width="106px" height="60px">
                   <use href="./images/icons.svg#icon-Union"></use>
-                  </svg>
-                </a>
+                </svg>
+              </a>
             </li>
             <li class="client">
               <a href="" class="client-svg-tile link">
                 <svg class="client-svg" width="106px" height="60px">
                   <use href="./images/icons.svg#icon-group"></use>
-                  </svg>
-                </a>
+                </svg>
+              </a>
             </li>
             <li class="client">
-              <a href="" class="client-svg-tile link"><svg class="client-svg" width="106px" height="60px">
+              <a href="" class="client-svg-tile link"
+                ><svg class="client-svg" width="106px" height="60px">
                   <use href="./images/icons.svg#icon-company"></use>
-                  </svg>
-                </a>
+                </svg>
+              </a>
             </li>
             <li class="client">
               <a href="" class="client-svg-tile link">
                 <svg class="client-svg" width="106px" height="60px">
                   <use href="./images/icons.svg#icon-foster"></use>
-                  </svg>
-                </a>
+                </svg>
+              </a>
             </li>
             <li class="client">
               <a href="" class="client-svg-tile link">
                 <svg class="client-svg" width="106px" height="60px">
                   <use href="./images/icons.svg#icon-brand"></use>
-                  </svg>
-                </a>
+                </svg>
+              </a>
             </li>
             <li class="client">
               <a href="" class="client-svg-tile link">
                 <svg class="client-svg" width="106px" height="60px">
                   <use href="./images/icons.svg#icon-tag"></use>
-                  </svg>
-                </a>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -590,19 +590,23 @@
           <!--Подписка-->
           <div class="subscribe">
             <p class="connect">Подпишитесь на рассылку</p>
-            <input
-              type="email"
-              name=""
-              id=""
-              class="input-email"
-              placeholder="E-mail"
-            />
-            <button type="submit" class="btn subscribe-button">
-              <span class="subscribe-txt"> Подписаться</span>
-              <svg width="24px" height="24px">
-                <use href="./images/icons.svg#send"></use>
-              </svg>
-            </button>
+            <form action="subscribtion">
+              <input
+                type="email"
+                name="e-mail"
+                id="e-mail"
+                class="input-email"
+                placeholder="E-mail"
+                required
+                autocomplete="email"
+              />
+              <button type="submit" class="btn subscribe-button">
+                <span class="subscribe-txt"> Подписаться</span>
+                <svg width="24px" height="24px">
+                  <use href="./images/icons.svg#send"></use>
+                </svg>
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -610,16 +614,15 @@
       <div data-modal class="backdrop is-hidden">
         <div class="modal">
           <button data-modal-close class="modal-close-btn">
-            <svg class="close-svg">
+            <svg class="close-svg" width="14px" height="14px">
               <use href="./images/icons.svg#close"></use>
             </svg>
           </button>
           <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
 
-          <form name="signup_form" autocomplete="on" novalidate>
-           <div class=".inputs">
-              <label for="name">Имя
-              </label>
+          <form name="signup_form" autocomplete="on" class="form">
+            <label for="name">Имя </label>
+            <div class="inputs">
               <input
                 type="text"
                 name="name"
@@ -629,57 +632,63 @@
                 required
                 pattern="^[a-zA-Z+а-яА-Я\s]+$"
               />
-                <svg width="18px" height="18px" class="input-icon">
-                  <use href="./images/icons.svg#person"></use>
-                </svg>
+              <svg width="18px" height="18px" class="input-icon">
+                <use href="./images/icons.svg#person"></use>
+              </svg>
             </div>
 
-           <div class=".inputs">
-              <label for="tel">Телефон</label>
-              <input type="tel" name="tel" id="tel" class="input-box" required pattern="[0-9]{10,12}" />
-
-                <svg width="18px" height="18px" class="input-icon">
-                  <use href="./images/icons.svg#telephone"></use>
-                </svg>
+            <label for="tel">Телефон</label>
+            <div class="inputs">
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                class="input-box"
+                required
+                pattern="[0-9]{10,12}"
+              />
+              <svg width="18px" height="18px" class="input-icon">
+                <use href="./images/icons.svg#telephone"></use>
+              </svg>
             </div>
 
-            <div class=".inputs">
-              <label for="email">Почта</label>
-              <input type="email" name="email" id="email" class="input-box" />
-
-                <svg width="18px" height="18px" class="input-icon">
-                  <use href="./images/icons.svg#email-box"></use>
-                </svg>
+            <label for="email">Почта</label>
+            <div class="inputs">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="input-box"
+                required
+              />
+              <svg width="18px" height="18px" class="input-icon">
+                <use href="./images/icons.svg#email-box"></use>
+              </svg>
             </div>
-
             <label for="comment">Комментарий</label>
+
             <textarea
               name="comment"
               id="comment"
               placeholder="Введите текст"
             ></textarea>
-
-
-              <svg width="11px" height="8px">
+            <div class="chk-div">
+              <input
+                class="checkbox .is-hidden"
+                type="checkbox"
+                name="user-checkbox"
+                id="checkbox"
+              />
+              <svg width="11px" height="8px" class="chk">
                 <use href="./images/icons.svg#check"></use>
               </svg>
-
-            <input
-              type="checkbox"
-              name="checkbox"
-              id="checkbox"
-              class="checkbox is-hidden"
-            />
-            <label for="checkbox"></label>
-              <span class="agreement">
-                Соглашаюсь с рассылкой и принимаю 
-                <a href="#" class="link-agreement">Условия договора
-                </a>
-              </span>
-            </label>
-
-
-
+              <label class="chk-lbl" for="checkbox">
+                <span class="agreement">
+                  Соглашаюсь с рассылкой и принимаю
+                  <a href="#" class="link-agreement">Условия договора </a>
+                </span>
+              </label>
+            </div>
             <button type="submit" class="btn subscribe-button send-btn">
               Отправить
             </button>
