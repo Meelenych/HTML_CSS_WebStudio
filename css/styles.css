@@ -680,7 +680,8 @@ img {
   position: absolute;
   fill: var(--title-cl);
   left: 15px;
-  top: 11px;
+  top: 50%;
+  transform: translatey(-50%);
 }
 
 input:focus + .input-icon {
@@ -712,15 +713,20 @@ textarea {
   font-size: 12px;
   line-height: 1.17px;
   letter-spacing: 0.01em;
-  margin-bottom: 20px;
-}
-.agreement {
-  /*text-decoration: none;*/
 }
 
-/*.link-agreement {
+.txt-area {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.agreement {
+  text-decoration: none;
+}
+
+.link-agreement {
   color: var(--accent-cl);
-}*/
+}
 
 label {
   font-size: 12px;
@@ -729,37 +735,47 @@ label {
 }
 
 /*Чекбокс*/
-.checkbox:checked + .chk-lbl {
-  color: red;
+.checkbox:checked + .chk-lbl::before {
+  background-color: var(--accent-cl);
+  border: 2px solid var(--accent-clitle-cl);
+  border-radius: 2px;
+
+  display: flex;
+  content: "";
+  width: 16px;
+  height: 15px;
 }
 
 .chk-div {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
 .chk {
   position: absolute;
-  top: 6px;
-  left: 18px;
-
-  background-color: var(--accent-cl);
+  top: 50%;
+  transform: translatey(-50%);
+  left: 15px;
   fill: var(--alt-text-cl);
 }
 
 .chk-lbl {
+  display: flex;
+  font-size: 14px;
+  letter-spacing: 0.03em;
 }
 
 .chk-lbl::before {
+  display: flex;
   content: "";
   width: 16px;
   height: 15px;
-  border: 1px solid var(--accent-cl);
+  border: 2px solid var(--title-cl);
   border-radius: 2px;
-  display: inline-block;
+  margin-right: 8px;
 }
 
 /*============Чекбокс===============*/

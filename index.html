@@ -666,23 +666,24 @@
               </svg>
             </div>
             <label for="comment">Комментарий</label>
-
-            <textarea
-              name="comment"
-              id="comment"
-              placeholder="Введите текст"
-            ></textarea>
+            <div class="txt-area">
+              <textarea
+                name="comment"
+                id="comment"
+                placeholder="Введите текст"
+              ></textarea>
+            </div>
             <div class="chk-div">
               <input
-                class="checkbox .is-hidden"
+                class="checkbox is-hidden"
                 type="checkbox"
                 name="user-checkbox"
                 id="checkbox"
               />
-              <svg width="11px" height="8px" class="chk">
-                <use href="./images/icons.svg#check"></use>
-              </svg>
               <label class="chk-lbl" for="checkbox">
+                <svg width="11px" height="8px" class="chk">
+                  <use href="./images/icons.svg#check"></use>
+                </svg>
                 <span class="agreement">
                   Соглашаюсь с рассылкой и принимаю
                   <a href="#" class="link-agreement">Условия договора </a>
